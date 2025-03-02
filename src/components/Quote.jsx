@@ -16,13 +16,13 @@ export default function Quote() {
             topic: "Coding",
             img: "/keyboard.png",
             description:
-                "I used to think coing is hard But in the end, it was the bad environment that taught me it doesn't matter where I am; it's all about what I really need to do and want to succeed at. Coding isn't just about creating something; it's an experience.",
+                "I used to think coding is hard But in the end, it was the bad environment that taught me it doesn't matter where I am; it's all about what I really need to do and want to succeed at. Coding isn't just about creating something; it's an experience.",
         },
     ];
 
     return (
-        <div className="absolute w-full mt-[-80px] pb-15">
-            <div className="max-w-[1480px] mx-auto">
+        <div className="absolute w-full mt-[-10px] md:mt-[-50px] pb-15">
+            <div className="max-w-[1280px] lg:max-w-[1480px] mx-auto px-4 md:px-0">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     {likes.map((like, index) => (
                         <div
@@ -33,12 +33,12 @@ export default function Quote() {
                                 <img
                                     src={like.img}
                                     alt="User Photo"
-                                    className="w-[100px] h-[100px] mb-8 rounded-full"
+                                    className="w-[100px] text-gray-600 h-[100px] mb-8 rounded-full"
                                 />
-                                <h1 className="font-bold font-sans text-4xl mb-4">
+                                <h1 className="font-bold font-serif text-4xl mb-4">
                                     {like.topic}
                                 </h1>
-                                <p className="font-sans">
+                                <p className="font-mono">
                                     "{like.description}"
                                 </p>
                             </div>

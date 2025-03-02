@@ -2,10 +2,10 @@ import SocialBubble from "./SocialBubble";
 import { useState, useEffect } from "react";
 
 export default function HeroRight() {
-    const fullText = "Hi I'm Plam";
+    const fullText = "Hi I'm Plam.";
     const typingSpeed = 120; // ความเร็วพิมพ์ (ms)
     const eraseSpeed = 80; // ความเร็วลบ (ms)
-    const pauseTime = 1200; // เวลาหยุดก่อนลบ (ms)
+    const pauseTime = 3000; // เวลาหยุดก่อนลบ (ms)
     const [text, setText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
 
@@ -33,20 +33,25 @@ export default function HeroRight() {
     }, [text, isDeleting]);
     return (
         <>
-            <h1 className="text-4xl mb-10 pt-10 font-semibold text-center md:text-left text-gray-800">
+            <h1 className="text-4xl font-mono mb-10 mt-0 md:mt-10 z-10 font-semibold text-center md:text-left text-gray-800">
                 {text}
                 <span className="animate-blink">|</span>
             </h1>
-            <h2 className="text-7xl mb-15 font-serif tracking-normal antialiased text-center md:text-left text-gray-600 animate-slide-right">
+            <h2 className="text-4xl px-4 md:px-0 lg:text-[65px] md:text-7xl mb-15 font-serif tracking-normal antialiased text-center md:text-left text-gray-600 animate-slide-right">
                 Passionate to{" "}
-                <span className="text-black uppercase">create</span> <br />{" "}
-                <span className="text-black uppercase">efficiency </span> both{" "}
-                Frontend & Backend
+                <span className="font-[roboto] text-black uppercase">
+                    create
+                </span>{" "}
+                <br />
+                <span className="font-[roboto] text-black uppercase">
+                    efficiency
+                </span>{" "}
+                both Frontend & Backend
             </h2>
             <div className="flex justify-center md:justify-start">
                 <a
                     href="/contact"
-                    className="bg-black border-1 text-white font-semibold px-7 py-4 hover:bg-[#f0f0f0] hover:border-1 hover:border-black hover:text-black"
+                    className="bg-black border-1 font-mono text-white font-semibold px-7 py-4 hover:bg-[#f0f0f0] hover:border-1 hover:border-black hover:text-black"
                 >
                     More About Me ＞
                 </a>

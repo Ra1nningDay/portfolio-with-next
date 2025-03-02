@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function HeroLeft() {
     return (
-        <div className="flex flex-col justify-between px-4 md:px-0">
+        <div className="flex flex-col    px-4 md:px-0">
             {/* รูปภาพที่กลืนกับพื้นหลัง */}
             <motion.div
                 initial={{ opacity: 0, y: 40 }}
@@ -15,7 +15,7 @@ export default function HeroLeft() {
                                 shadow-[4px_4px_0px_black] from-transparent opacity-60"
                 ></div>
                 <img
-                    className="w-full h-[300px] md:h-[550px] object-cover mix-blend-multiply 
+                    className="w-full h-[400px] md:h-[550px] object-cover mix-blend-multiply 
                                 transition-all duration-500"
                     src="/hero.jpg"
                     alt="Retro Art"
