@@ -9,7 +9,6 @@ export default function Home() {
     const pauseTime = 1200; // เวลาหยุดก่อนลบ (ms)
     const [text, setText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
-    const [index, setIndex] = useState(0);
 
     useEffect(() => {
         let timeout;
@@ -36,15 +35,15 @@ export default function Home() {
 
     return (
         <>
-            <div className="my-4 md:mt-10">
+            <div className="mt-4 flex justify-end  md:mt-10">
                 {/* ข้อความที่มี fade in และ slide up */}
-                <h1 className="p-2 rounded-r-4xl text-black border-2 inline-block w-auto text-lg md:text-2xl font-semibold relative animate-fade-slide">
-                    <span className="inline-block me-2 w-3 h-3 bg-red-500 rounded-full animate-pulse-smooth"></span>
+                <h1 className="p-2  rounded-l-4xl text-black border-2 inline-block w-auto text-lg md:text-2xl font-semibold sticky animate-fade-slide">
+                    <span className="inline-block me-2 w-3 h-3 bg-red-500 rounded-full animate-pulse-smooth mb-0.5"></span>
                     Available
                 </h1>
             </div>
 
-            <div className="container mx-auto px-0 md:px-4">
+            <div className="container mx-auto pb-12 px-0 md:px-4 md:pb-0">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="flex flex-col justify-between">
                         {/* รูปภาพที่มี zoom in เมื่อโหลด */}
