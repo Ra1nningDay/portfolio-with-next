@@ -40,7 +40,7 @@ const skillsData = {
         },
         {
             skill: "Next",
-            percentage: 30,
+            percentage: 20,
             icon: <SiNextdotjs className="text-2xl" />,
         },
         {
