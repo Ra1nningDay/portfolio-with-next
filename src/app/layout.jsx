@@ -20,6 +20,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
+            <head>
+                <link rel="preload" href="/hero.jpg" as="image" />
+                {/* Add preconnect for any external resources */}
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+            </head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
             >

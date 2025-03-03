@@ -1,28 +1,19 @@
-import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function HeroLeft({ img }) {
     return (
-        <div className="flex flex-col    px-4 md:px-0">
-            {/* รูปภาพที่กลืนกับพื้นหลัง */}
-            <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="relative mt-10 p-2 bg-transparent"
-            >
-                <div
-                    className="absolute inset-0 bg-gradient-to-b border-4 border-black 
-                                shadow-[4px_4px_0px_black] from-transparent opacity-60"
-                ></div>
-                <img
-                    className="w-full h-[400px] md:h-[550px] object-cover mix-blend-multiply 
-                                transition-all duration-500"
+        <div className="relative w-full h-[400px] md:h-[550px] border-4 border-black p-2 shadow-[8px_8px_0_0_#000] hover:shadow-[12px_12px_0_0_#000] transition-all duration-300">
+            <div className="relative w-full h-full overflow-hidden border-2 border-black">
+                <Image
                     src={img}
-                    alt="Retro Art"
-                    width={500}
-                    height={500}
+                    alt="Hero Image"
+                    fill
+                    priority
+                    className="object-cover grayscale-25 hover:grayscale-0 transition-all duration-500"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    quality={75}
                 />
-            </motion.div>
+            </div>
         </div>
     );
 }

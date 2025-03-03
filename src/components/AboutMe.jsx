@@ -10,11 +10,11 @@ export default function () {
                 <img
                     src="/plamthis.png"
                     alt="Profile Picture"
-                    className="w-[250px] h-[250px] md:w-[350px] md:h-[350px] rounded-full object-cover border-4 border-black relative z-10 grayscale-25 hover:grayscale-0 transition-all duration-500"
+                    className="w-[250px] h-[250px] md:w-[350px] md:h-[350px] rounded-full object-cover object-left border-4 border-black relative z-10 grayscale-25 hover:grayscale-0 transition-all duration-500"
                 />
             </div>
 
-            <div className="relative max-w-2xl mb-10">
+            <div className="relative max-w-2xl my-4">
                 <div className="absolute -inset-2 bg-black/5 skew-y-1"></div>
                 <p className="relative font-mono text-base md:text-lg leading-relaxed p-4 text-center">
                     Hi, I am{" "}
@@ -34,7 +34,7 @@ export default function () {
                     apply my skills and contribute meaningfully.
                 </p>
             </div>
-            <div className="relative w-full">
+            <div className="relative w-full my-4">
                 <div className="absolute -inset-2 bg-black/5 skew-y-1"></div>
                 <div className="relative p-4">
                     <h2 className="font-mono text-xl font-bold mb-4 text-center border-b-2 border-black pb-2">

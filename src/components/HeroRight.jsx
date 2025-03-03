@@ -50,7 +50,7 @@ export default function HeroRight() {
             </h2>
             <div className="flex justify-center md:justify-start">
                 <a
-                    href="/contact"
+                    href="/bio"
                     className="bg-black border-1 font-mono text-white font-semibold px-7 py-4 hover:bg-[#f0f0f0] hover:border-1 hover:border-black hover:text-black"
                 >
                     More About Me ＞

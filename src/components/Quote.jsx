@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Quote() {
     const likes = [
         {
@@ -20,31 +24,71 @@ export default function Quote() {
         },
     ];
 
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.3,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: {
+            y: 50,
+            opacity: 0,
+        },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                type: "spring",
+                stiffness: 100,
+                damping: 12,
+            },
+        },
+    };
+
     return (
         <div className="absolute w-full mt-[-10px] md:mt-[-50px] pb-15">
             <div className="max-w-[1280px] lg:max-w-[1480px] mx-auto px-4 md:px-0">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <motion.div
+                    className="grid grid-cols-1 md:grid-cols-3 gap-10"
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                >
                     {likes.map((like, index) => (
-                        <div
+                        <motion.div
                             key={index}
-                            className="bg-white border-2 p-8 shadow-lg"
+                            className="bg-white border-4 border-black p-8 shadow-[8px_8px_0_0_#000] hover:shadow-[12px_12px_0_0_#000] transition-all duration-300"
+                            variants={itemVariants}
                         >
-                            <div className="flex flex-col">
-                                <img
+                            <div className="flex flex-col items-center">
+                                <motion.img
                                     src={like.img}
-                                    alt="User Photo"
-                                    className="w-[100px] text-gray-600 h-[100px] mb-8 rounded-full"
+                                    alt={like.topic}
+                                    className="w-[100px] h-[100px] mb-8"
+                                    whileHover={{
+                                        scale: 1.1,
+                                        rotate: 5,
+                                        transition: { duration: 0.2 },
+                                    }}
                                 />
-                                <h1 className="font-bold font-serif text-4xl mb-4">
+                                <motion.h1
+                                    className="font-bold font-mono text-4xl mb-4 text-center"
+                                    whileHover={{ scale: 1.05 }}
+                                >
                                     {like.topic}
-                                </h1>
-                                <p className="font-mono">
+                                </motion.h1>
+                                <p className="font-mono text-center">
                                     "{like.description}"
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </div>
     );

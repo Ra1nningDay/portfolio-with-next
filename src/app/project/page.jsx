@@ -1,3 +1,11 @@
+"use client";
+
+import ProjectGrid from "@/components/ProjectGrid";
+
 export default function About() {
-    return <h1>project</h1>;
+    return (
+        <div className="mt-15">
+            <ProjectGrid />
+        </div>
+    );
 }
