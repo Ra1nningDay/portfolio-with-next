@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function HeroLeft() {
+export default function HeroLeft({ img }) {
     return (
         <div className="flex flex-col    px-4 md:px-0">
             {/* รูปภาพที่กลืนกับพื้นหลัง */}
@@ -17,7 +17,7 @@ export default function HeroLeft() {
                 <img
                     className="w-full h-[400px] md:h-[550px] object-cover mix-blend-multiply 
                                 transition-all duration-500"
-                    src="/hero.jpg"
+                    src={img}
                     alt="Retro Art"
                     width={500}
                     height={500}

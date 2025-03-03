@@ -16,7 +16,7 @@ export default function SocialBubble() {
         },
     ];
     return (
-        <div className="flex justify-center md:justify-end md:mt-6 space-x-2">
+        <div className="flex justify-center md:justify-end mt-8 md:mt-6 space-x-2">
             {socials.map((social, index) => (
                 <Link
                     href={social.link}
