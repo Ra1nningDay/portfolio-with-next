@@ -2,7 +2,7 @@ import SocialBubble from "./SocialBubble";
 import { useState, useEffect } from "react";
 
 export default function HeroRight() {
-    const fullText = "Hi I'm Plam.";
+    const fullText = "Hi I'm Plam-";
     const typingSpeed = 120; // ความเร็วพิมพ์ (ms)
     const eraseSpeed = 80; // ความเร็วลบ (ms)
     const pauseTime = 3000; // เวลาหยุดก่อนลบ (ms)
