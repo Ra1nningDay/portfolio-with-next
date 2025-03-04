@@ -19,9 +19,16 @@
 
  */
 
+:root {
+    --background: #f2f2f3;
+}
+
+.dark {
+    --background: black;
+}
+
 body {
     color: var(--foreground);
-    background: #f2f2f3;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;

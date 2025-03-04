@@ -17,32 +17,9 @@ import HeroLeft from "../components/HeroLeft";
 import Introduce from "../components/Introduce";
 
 export default function Home() {
-    const introRef = useRef(null);
-    const isInView = useInView(introRef, {
-        once: true,
-        margin: "0px",
-        amount: 0.2,
-    });
-
-    const introVariants = {
-        hidden: {
-            opacity: 0,
-            y: 50,
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.8,
-                ease: "easeOut",
-                staggerChildren: 0.2,
-            },
-        },
-    };
-
     return (
         <>
-            <div className="border-b-1 pt-20 pb-12 md:pb-40 relative">
+            <div className="border-b-1 pt-15 pb-12 md:pb-40 relative">
                 <Available />
                 {/* Hero Section */}
                 <div className="container mx-auto md:px-4 md:pb-0">

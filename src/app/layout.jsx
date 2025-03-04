@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
+import { ThemeProvider } from "../components/ThemeProvider";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -19,18 +20,24 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             <head>
                 <link rel="preload" href="/hero.jpg" as="image" />
                 {/* Add preconnect for any external resources */}
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
             </head>
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
+                className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background`}
             >
-                <Navbar />
-
-                <main className="flex-grow-1 relative">{children}</main>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="dark"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <Navbar />
+                    <main className="flex-grow-1 relative">{children}</main>
+                </ThemeProvider>
             </body>
         </html>
     );
