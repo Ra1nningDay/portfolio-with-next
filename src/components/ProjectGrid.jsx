@@ -9,10 +9,20 @@ import Link from "next/link";
 const projects = [
     {
         id: 1,
-        title: "Amazon Scraper",
-        image: "/project1.jpg",
-        description: "A powerful web scraper for Amazon products.",
+        title: "Care Bridge",
+        image: "/projects/carebridge.png",
+        description:
+            "Carebridge - A platform connecting elderly individuals with caregivers through GPS-based search, providing a space for health volunteers (VHVs) to record elderly health assessments, and featuring a forum for sharing caregiving knowledge and advice.",
         technologies: ["PHP", "Laravel", "MySQL"],
+        sysmtem: [
+            "Role-based Authentication",
+            "Application Caregivers",
+            "GPS-based Caregiver Search",
+            "Dashboard Management",
+            "Forum & Comment System",
+            "Health Check Logging",
+            "Chat, Notifications",
+        ],
     },
     {
         id: 2,
@@ -120,6 +130,17 @@ export default function ProjectGrid() {
                                     <p className="font-mono text-sm">
                                         {project.description}
                                     </p>
+                                    <ul>
+                                        {project.sysmtem?.map(
+                                            (system, index) => (
+                                                <li key={index}>
+                                                    <p className="font-mono text-sm">
+                                                        - {system}
+                                                    </p>
+                                                </li>
+                                            )
+                                        )}
+                                    </ul>
                                     <div className="flex flex-wrap gap-2">
                                         {project.technologies?.map(
                                             (tech, index) => (
