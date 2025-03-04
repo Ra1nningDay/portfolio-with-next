@@ -9,7 +9,7 @@ import Link from "next/link";
 const projects = [
     {
         id: 1,
-        title: "Care Bridge",
+        title: "CareBridge",
         image: "/projects/carebridge.png",
         description:
             "Carebridge - A platform connecting elderly individuals with caregivers through GPS-based search, providing a space for health volunteers (VHVs) to record elderly health assessments, and featuring a forum for sharing caregiving knowledge and advice.",
