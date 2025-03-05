@@ -26,21 +26,23 @@ const projects = [
     },
     {
         id: 2,
-        title: "College News Website",
+        title: "CPVC News",
         image: "/projects/cpvc-blog/1.png",
         description:
-            "A dynamic platform designed to keep students, faculty, and staff up-to-date with the latest happenings within the college community. The website features news articles, event updates, student achievements, and important announcements. It provides a centralized hub for all campus-related information, promoting engagement, communication, and a sense of connection across the college.",
+            "The website features news articles, event updates, student achievements, and important announcements. It provides a centralized hub for all campus-related information, promoting engagement, communication, and a sense of connection across the college.",
         technologies: ["PHP", "FastRoute", "MySQL"],
     },
     {
         id: 3,
-        title: "Skyscraper View",
-        image: "/project3.jpg",
-        description: "A unique perspective of high-rise buildings.",
+        title: "Group Portfolio Website",
+        image: "/projects/group-port/6.png",
+        description:
+            "A Group Portfolio Website is a digital platform designed to showcase the collective work, skills, and achievements of a group of individuals or a team. It serves as a unified portfolio to highlight collaborative projects, personal profiles, and contributions of each member.",
+        technologies: ["React", "TypeScript", "Bootstrap"],
     },
     {
         id: 4,
-        title: "Mountain Landscape",
+        title: "GooderHealth",
         image: "/project4.jpg",
         description: "A breathtaking view of the mountains.",
     },
@@ -122,7 +124,7 @@ export default function ProjectGrid() {
                                         alt={project.title}
                                         width={400}
                                         height={400}
-                                        className="w-full min-h-[255px] h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                                        className="w-full min-h-[255px] h-auto object-cover grayscale-25 hover:grayscale-0 transition-all duration-500"
                                     />
                                 </div>
                                 <div className="space-y-3">
@@ -148,7 +150,7 @@ export default function ProjectGrid() {
                                             (tech, index) => (
                                                 <span
                                                     key={index}
-                                                    className="font-mono text-xs bg-black text-white px-2 py-1"
+                                                    className="font-mono text-xs border-1 border-black hover:bg-white hover:text-black cursor-pointer bg-black text-white px-2 py-1"
                                                 >
                                                     {tech}
                                                 </span>
