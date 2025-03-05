@@ -14,21 +14,23 @@ const projects = [
         description:
             "Carebridge - A platform connecting elderly individuals with caregivers through GPS-based search, providing a space for health volunteers (VHVs) to record elderly health assessments, and featuring a forum for sharing caregiving knowledge and advice.",
         technologies: ["PHP", "Laravel", "MySQL"],
-        sysmtem: [
-            "Role-based Authentication",
-            "Application Caregivers",
-            "GPS-based Caregiver Search",
-            "Dashboard Management",
-            "Forum & Comment System",
-            "Health Check Logging",
-            "Chat, Notifications",
-        ],
+        // sysmtem: [
+        //     "Role-based Authentication",
+        //     "Application Caregivers",
+        //     "GPS-based Caregiver Search",
+        //     "Dashboard Management",
+        //     "Forum & Comment System",
+        //     "Health Check Logging",
+        //     "Chat, Notifications",
+        // ],
     },
     {
         id: 2,
-        title: "Modern Architecture",
-        image: "/project2.jpg",
-        description: "A showcase of modern building designs.",
+        title: "College News Website",
+        image: "/projects/cpvc-blog/1.png",
+        description:
+            "A dynamic platform designed to keep students, faculty, and staff up-to-date with the latest happenings within the college community. The website features news articles, event updates, student achievements, and important announcements. It provides a centralized hub for all campus-related information, promoting engagement, communication, and a sense of connection across the college.",
+        technologies: ["PHP", "FastRoute", "MySQL"],
     },
     {
         id: 3,
@@ -120,7 +122,7 @@ export default function ProjectGrid() {
                                         alt={project.title}
                                         width={400}
                                         height={400}
-                                        className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                                        className="w-full min-h-[255px] h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500"
                                     />
                                 </div>
                                 <div className="space-y-3">

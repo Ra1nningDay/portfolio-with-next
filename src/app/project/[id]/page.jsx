@@ -55,7 +55,7 @@ export default function ProjectPage({ params }) {
                                     {project.description}
                                 </p>
                             </div>
-                            <div className="spacey--3">
+                            <div className="space-y-4">
                                 <h3 className="text-2xl font-mono font-semibold">
                                     References
                                 </h3>
