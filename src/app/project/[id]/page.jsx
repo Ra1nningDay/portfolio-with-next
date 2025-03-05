@@ -15,10 +15,15 @@ const projects = [
             "/projects/about.png",
             "/projects/caregiver.png",
             "/projects/notify.png",
+            "/projects/chat.png",
             "/projects/profile.png",
             "/projects/edit-profile.png",
         ],
-        ref: ["/projects/ref/img1.png"],
+        ref: [
+            "/projects/ref/3.jpg",
+            "/projects/ref/1.jpg",
+            "/projects/ref/2.jpg",
+        ],
         description:
             "Care Bridge is a platform designed to connect elderly individuals with suitable caregivers. It features a self-health assessment tool and serves as a space for storing health data from village health volunteers (VHV) who conduct health checks for the elderly. This enables easier tracking of health statuses, offering valuable insights into the health of elderly individuals, and provides access to historical health records for improved care.",
         technologies: ["PHP", "Laravel", "JavaScript"],
@@ -54,7 +59,21 @@ export default function ProjectPage({ params }) {
                                 <h3 className="text-2xl font-mono font-semibold">
                                     References
                                 </h3>
-                                <Image />
+                                {project.ref?.map((ref, index) => (
+                                    <Link
+                                        href={ref}
+                                        key={index}
+                                        target="__blank"
+                                    >
+                                        <Image
+                                            src={ref}
+                                            width={800}
+                                            height={400}
+                                            className="w-full object-cover mt-6 border-4 border-black"
+                                            alt={project.title}
+                                        />
+                                    </Link>
+                                ))}
                             </div>
                         </div>
                     </div>

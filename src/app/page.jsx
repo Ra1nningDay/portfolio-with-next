@@ -19,7 +19,7 @@ import Introduce from "../components/Introduce";
 export default function Home() {
     return (
         <>
-            <div className="border-b-1 pt-15 pb-12 md:pb-40 relative">
+            <div className=" pt-15 pb-12 md:pb-40 relative">
                 <Available />
                 {/* Hero Section */}
                 <div className="container mx-auto md:px-4 md:pb-0">

@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
                     disableTransitionOnChange
                 >
                     <Navbar />
-                    <main className="flex-grow-1 relative border-4 border-foreground">
+                    <main className="flex-grow-1 relative border-4 border-b-0 border-foreground">
                         {children}
                     </main>
                 </ThemeProvider>
