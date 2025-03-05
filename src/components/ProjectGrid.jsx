@@ -48,9 +48,10 @@ const projects = [
     },
     {
         id: 5,
-        title: "Minimalist House",
-        image: "/project5.jpg",
-        description: "A clean and modern house design.",
+        title: "Educational Media Development Website",
+        image: "/projects/cpvc-media/1.png",
+        description:
+            "With the growing use of diverse educational media, students are increasingly drawn to online resources like social media, recorded lectures, and instructional videos.To support this, our team developed an educational media project to enhance engagement, improve retention, and create a more effective and enjoyable learning experience for both students and teachers.",
     },
     {
         id: 6,
